@@ -1,0 +1,22 @@
+{
+  "name": "endprojekt",
+  "version": "1.0.0",
+  "description": "endprojekt kreative Technologien",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianenguyen1998/kreativeTechnologien.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lianenguyen1998/kreativeTechnologien/issues"
+  },
+  "homepage": "https://github.com/lianenguyen1998/kreativeTechnologien#readme",
+  "dependencies": {
+    "vue": "^3.2.31"
+  }
+}
