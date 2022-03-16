@@ -1,24 +1,41 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
+import {Gemaelde} from "./model/gemaelde.js";
+import Quiz from "@/components/Quiz.vue"
+
+</script>
+
+<script>
+ let gemaelde = [];
+    gemaelde.push(new Gemaelde(1, './images/gemaelde1.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(2, './images/gemaelde2.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(3, './images/gemaelde3.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(4, './images/gemaelde4.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(5, './images/gemaelde5.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(6, './images/gemaelde6.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(7, './images/gemaelde7.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(8, './images/gemaelde8.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(9, './images/gemaelde9.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+    gemaelde.push(new Gemaelde(10, './images/gemaelde10.jpg', 'Michelangelo', 'Van Gogh', 'Vermeer', 'Wer ist der Künstler?'));
+
+export default {
+  data(){
+    return {
+      gemaelde: gemaelde
+    }
+    
+
+  }
+}
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <Quiz bilder="gemaelde"/>
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
@@ -27,99 +44,5 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </template>
 
 <style>
-@import "@/assets/base.css";
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
+ @import "@/assets/style.css";
 </style>
