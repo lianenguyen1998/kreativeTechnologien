@@ -9,25 +9,26 @@
     </head>
     <body>
         <main id="app">
-    
+        
             <div class="container" v-if="nextBild">
-                <div class="bild"><img alt="Gemälde" src="./images/gemaelde1.jpg"></div>
+                <div class="bild"><img alt="Gemälde" v-bind:src="currentPic.bild"></div>
             </div>
             <div class="container" v-else >
                 <div class="bild"><img alt="Gemälde" src="./images/gemaelde1.jpg"></div>
             </div>
-            <div class="position-absolute bottom-0 end-0">
-            <button id="next" v-on:click="nextpic" class="btn btn-primary" type="submit">Weiter</button>
+        
+            <div>
+                <button id="next" v-on:click="nextpic" class="btn btn-primary" type="submit">Weiter</button>
             </div>
-          
+            
             <div class="divider"></div>
             
             <div class="right">
-                <h3>Wie heißt der Künstler, der das Gemälde gezeichnet hat? Noch eine weitere Frage</h3>
+                <h3>{{currentPic.frage}}</h3>
                 <div class="center">
-                    <button id="antwort" class="btn btn-secondary btn-lg btn-block">antwort1</button>
-                    <button id="antwort" class="btn btn-secondary btn-lg btn-block">antwort2</button>
-                    <button id="antwort" class="btn btn-secondary btn-lg btn-block">antwort3</button>
+                    <button id="antwort1" class="btn btn-secondary btn-lg btn-block" v-on:click="checkAnswer1">{{currentPic.antwort1}}</button>
+                    <button id="antwort2" class="btn btn-secondary btn-lg btn-block" v-on:click="checkAnswer2">{{currentPic.antwort2}}</button>
+                    <button id="antwort3" class="btn btn-secondary btn-lg btn-block" v-on:click="checkAnswer3">{{currentPic.antwort3}}</button>
                 </div>
             </div>
         </main>
