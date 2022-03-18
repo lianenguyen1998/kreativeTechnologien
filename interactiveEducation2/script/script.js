@@ -30,7 +30,8 @@ let vm = new Vue({
     data:{
         gemaelde: gemaelde,
         nextBild: false,
-        currentPic: gemaelde[0]
+        currentPic: gemaelde[0],
+        punktestand: 0
 
     },
     methods:{
@@ -49,9 +50,9 @@ let vm = new Vue({
             this.nextBild = true;
             
             //change color back to black
-            document.getElementById("antwort1").style.background='#000000';
-            document.getElementById("antwort2").style.background='#000000';
-            document.getElementById("antwort3").style.background='#000000';
+            document.getElementById("antwort1").style.backgroundColor='#000000';
+            document.getElementById("antwort2").style.backgroundColor='#000000';
+            document.getElementById("antwort3").style.backgroundColor='#000000';
 
             return this.currentPic;
         },
@@ -59,25 +60,31 @@ let vm = new Vue({
         //color changing Answers
         checkAnswer1(){
             if('antwort1' === this.currentPic.richtig){
-                document.getElementById("antwort1").style.background='#228B22';
+                document.getElementById("antwort1").style.backgroundColor='#228B22';
+                this.punktestand += 1;
             } else {
-                document.getElementById("antwort1").style.background='#B22222';
+                document.getElementById("antwort1").style.backgroundColor='#B22222';
+                this.punktestand -= 0.5;
             }
         },
 
         checkAnswer2(){
             if('antwort2' === this.currentPic.richtig){
-                document.getElementById("antwort2").style.background='#228B22';
+                document.getElementById("antwort2").style.backgroundColor='#228B22';
+                this.punktestand += 1;
             } else {
-                document.getElementById("antwort2").style.background='#B22222';
+                document.getElementById("antwort2").style.backgroundColor='#B22222';
+                this.punktestand -= 0.5;
             }
         },
 
         checkAnswer3(){
             if('antwort3' === this.currentPic.richtig){
-                document.getElementById("antwort3").style.background='#228B22';
+                document.getElementById("antwort3").style.backgroundColor='#228B22';
+                this.punktestand += 1;
             } else {
-                document.getElementById("antwort3").style.background='#B22222';
+                document.getElementById("antwort3").style.backgroundColor='#B22222';
+                this.punktestand -= 0.5;
             }
         },
 
