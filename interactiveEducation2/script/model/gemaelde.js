@@ -1,4 +1,4 @@
-let Gemaelde = function(counter, bild, antwort1, antwort2, antwort3, frage, richtig){
+let Gemaelde = function(counter, bild, antwort1, antwort2, antwort3, frage, richtig, name, text){
     if(!bild){
         this.image = '.images/gemaelde1.jpg'
     } else {
@@ -10,6 +10,8 @@ let Gemaelde = function(counter, bild, antwort1, antwort2, antwort3, frage, rich
     this.antwort3 = antwort3;
     this.richtig = richtig;
     this.frage = frage;
+    this.name = name;
+    this.text = text;
 }
 
 export{Gemaelde}
