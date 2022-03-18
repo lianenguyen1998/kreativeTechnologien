@@ -54,36 +54,55 @@ let vm = new Vue({
             document.getElementById("antwort2").style.backgroundColor='#000000';
             document.getElementById("antwort3").style.backgroundColor='#000000';
 
+            document.getElementById("antwort1").style.color='white'
+            document.getElementById("antwort2").style.color='white'
+            document.getElementById("antwort3").style.color='white'
+
+            document.getElementById("antwort1").style.borderColor='#000000';
+            document.getElementById("antwort2").style.borderColor='#000000';
+            document.getElementById("antwort3").style.borderColor='#000000';
             return this.currentPic;
         },
 
         //color changing Answers
         checkAnswer1(){
             if('antwort1' === this.currentPic.richtig){
-                document.getElementById("antwort1").style.backgroundColor='#228B22';
+                document.getElementById("antwort1").style.borderColor='#228B22';
+                document.getElementById("antwort1").style.backgroundColor='white';
+                document.getElementById("antwort1").style.color='black'
                 this.punktestand += 1;
             } else {
-                document.getElementById("antwort1").style.backgroundColor='#B22222';
+                document.getElementById("antwort1").style.borderColor='#B22222';
+                document.getElementById("antwort1").style.backgroundColor='white';
+                document.getElementById("antwort1").style.color='black'
                 this.punktestand -= 0.5;
             }
         },
 
         checkAnswer2(){
             if('antwort2' === this.currentPic.richtig){
-                document.getElementById("antwort2").style.backgroundColor='#228B22';
+                document.getElementById("antwort2").style.borderColor='#228B22';
+                document.getElementById("antwort2").style.backgroundColor='white';
+                document.getElementById("antwort2").style.color='black'
                 this.punktestand += 1;
             } else {
-                document.getElementById("antwort2").style.backgroundColor='#B22222';
+                document.getElementById("antwort2").style.borderColor='#B22222';
+                document.getElementById("antwort2").style.backgroundColor='white';
+                document.getElementById("antwort2").style.color='black'
                 this.punktestand -= 0.5;
             }
         },
 
         checkAnswer3(){
             if('antwort3' === this.currentPic.richtig){
-                document.getElementById("antwort3").style.backgroundColor='#228B22';
+                document.getElementById("antwort3").style.borderColor='#228B22';
+                document.getElementById("antwort3").style.backgroundColor='white';
+                document.getElementById("antwort3").style.color='black'
                 this.punktestand += 1;
             } else {
-                document.getElementById("antwort3").style.backgroundColor='#B22222';
+                document.getElementById("antwort3").style.borderColor='#B22222';
+                document.getElementById("antwort3").style.backgroundColor='white';
+                document.getElementById("antwort3").style.color='black'
                 this.punktestand -= 0.5;
             }
         },

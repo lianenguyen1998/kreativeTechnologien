@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Wer ist der Künstler?</title>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="script/script.js" defer=defer type="module"></script>
@@ -9,14 +10,43 @@
         <link rel="stylesheet" type="text/css" href="style.css" >
     </head>
     <body>
+
+
         <main id="app">
-        
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      
+                        <div class="container" v-if="nextBild">
+                            <div class="bild"><img alt="Gemälde" v-bind:src="currentPic.bild"></div>
+                        </div>
+                        <div class="container" v-else >
+                            <div class="bild"><img alt="Gemälde" src="./images/gemaelde1.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back">
+                        <div class="flip-card-content">
+                            <div class="flip-card-body">
+                                <h3> body </h3>
+                                <p>informationen über den künstler</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <!--
             <div class="container" v-if="nextBild">
                 <div class="bild"><img alt="Gemälde" v-bind:src="currentPic.bild"></div>
             </div>
             <div class="container" v-else >
                 <div class="bild"><img alt="Gemälde" src="./images/gemaelde1.jpg"></div>
             </div>
+        -->
+
         
             <div>
                 <button id="next" v-on:click="nextpic" class="btn btn-primary" type="submit">Weiter</button>
@@ -34,4 +64,8 @@
             </div>
         </main>
     </body>
+  
+
 </html>
+
+
