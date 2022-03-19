@@ -1,0 +1,46 @@
+  /*Startseite*/
+  h1{
+    margin: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 5px solid;
+}
+h3{
+    margin-top: 10%;
+}
+
+  body{
+    align-items: center;
+    text-align: center;
+  }
+
+  button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5%;
+    border:2px;
+    margin-right:10% ;
+    width: 200px;
+    height: 50px;
+}
+
+input{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5%;
+    border:2px;
+    width: 200px;
+    height: 50px;
+  }
+
+/** weiter-button */
+.btn-primary {
+    background-color: black;
+    border-color: black;
+
+}
+.btn.btn-primary:hover{
+    background: grey;
+}
+
+  .farbtheorie, .kuenstler{
+      display: block;
+      margin: 0, auto;
+  }

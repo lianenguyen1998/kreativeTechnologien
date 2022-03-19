@@ -1,5 +1,5 @@
 h1{
-    margin-left: 50px;
+    margin: 2%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-bottom: 5px solid;
 
@@ -82,6 +82,7 @@ button{
 .btn-primary {
     background-color: black;
     border-color: black;
+
 }
 .btn.btn-primary:hover{
     background: grey;
@@ -132,7 +133,6 @@ button{
     justify-content: center;
     float: left;
     position: absolute;
-    border: 2em;
   }
 
   .flip-card-front {
@@ -159,3 +159,5 @@ button{
   height: 100%;
   object-fit: contain;
   }
+
+

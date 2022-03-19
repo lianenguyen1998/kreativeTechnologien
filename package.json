@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lianenguyen1998/kreativeTechnologien#readme",
   "dependencies": {
     "vue": "^3.2.31",
-    "vue-flipcard": "^0.1.4"
+    "vue-flipcard": "^0.1.4",
+    "vue-router": "^4.0.14"
   }
 }
