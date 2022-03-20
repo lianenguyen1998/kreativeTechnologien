@@ -45,3 +45,8 @@ input{
       display: block;
       margin: 0, auto;
   }
+
+  .btn:not(:disabled):not(:disabled):active {
+    background-color: white;
+    color: black;
+ } 
