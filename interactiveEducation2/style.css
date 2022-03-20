@@ -160,4 +160,12 @@ button{
   object-fit: contain;
   }
 
+  .celebrate img{
+      margin-left: 2%;
+      width: 50%;
+      object-fit: contain;
+      float: right;
+      margin-right: 15%;
+  }
+
 
