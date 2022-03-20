@@ -21,6 +21,8 @@ gemaelde.push(new Gemaelde(9, './images/gemaelde9.jpg', 'Michelangelo', 'Leonard
     'Das legendäre Fresko kann man nun wieder in der Renaissancekirche Santa Maria delle Grazie in Mailand bewundern. Im ehemaligen Speisesaal des anliegenden Klosters kreierte der Künstler von 1494 bis 1498 das Wandgemälde. Es wurde über die letzten 20 Jahre restauriert und ist jetzt wieder für die Öffentlichkeit zugänglich.'));
 gemaelde.push(new Gemaelde(10, './images/gemaelde10.jpg', 'Pablo Picasso', 'Vincent Van Gogh', 'Claude Monet', 'Wer ist der Künstler?', 'antwort2', 'Sternennacht',
     'Es ist eines seiner berühmtesten Werke. Mittlerweile hängt das Ölgemälde von 1889 im Museum of Modern Art in New York City. Wusstest du, dass die Wirbel des Sternenhimmels im Bild eines der komplexesten mathematischen Phänomene darstellen? Die Turbulenz.'));
+gemaelde.push(new Gemaelde(11, './images/gemaelde11.jpg', 'Vincent Van Gogh', 'Pablo Picasso', 'Gustav Klimt', 'Wer ist der Künstler?', 'antwort3', 'Der Kuss', 
+    'Der ursprüngliche Titel war -Das Liebespaar- und ist eines der bedeutensten Werke des Künstlers. Es gehört zum Jugendstil und gilt zudem als das bekannteste Gemälde des Malers, da es durch Reproduktionen in vielerlei Form weit verbreitet wurde. Der Künstler malte das Bild in der ersten Jahreshälfte 1908 und vollendete es 1909, einer Zeit, die als des Künstlers goldene Phase bezeichnet wird und aus der seine populärsten Arbeiten stammen.'));
 /* Richtige Antworten
 1: Michelangelo
 2: Leonardi da Vinci
@@ -42,7 +44,7 @@ let vm = new Vue({
         nextBild: false,
         currentPic: gemaelde[0],
         punktestand: 0,
-        gemaelde_done: [],
+        gemaelde_done: [1],
         bild_counter: 0,
     },
     methods:{
@@ -54,7 +56,7 @@ let vm = new Vue({
 
         //nächstes Bild
         nextpic(){
-            let randomCounter = this.getRandomInt(1,10);
+            let randomCounter = this.getRandomInt(1,11);
             console.log(randomCounter);
 
             if(this.bild_counter < 10){
