@@ -31,8 +31,9 @@ let vm = new Vue({
         gemaelde: gemaelde,
         nextBild: false,
         currentPic: gemaelde[0],
-        punktestand: 0
-
+        punktestand: 0,
+        gemaelde_done: [],
+        bild_counter:0,
     },
     methods:{
         getRandomInt(min,max){
@@ -45,9 +46,19 @@ let vm = new Vue({
         nextpic(){
             let randomCounter = this.getRandomInt(1,10);
             console.log(randomCounter);
-            this.currentPic =  gemaelde.find(element => element.counter === randomCounter);
+
+            if(this.gemaelde_done.includes(randomCounter)){
+                this.nextpic();
+            } else {
+                this.currentPic =  this.gemaelde.find(element => element.counter === randomCounter);
+            }
+            
+            
             console.log(this.currentPic);
+
             this.nextBild = true;
+            this.gemaelde_done.push(this.currentPic.counter);
+            this.bild_counter += 1;
             
             //change color back to black
             document.getElementById("antwort1").style.backgroundColor='#000000';
@@ -61,6 +72,7 @@ let vm = new Vue({
             document.getElementById("antwort1").style.borderColor='#000000';
             document.getElementById("antwort2").style.borderColor='#000000';
             document.getElementById("antwort3").style.borderColor='#000000';
+
             return this.currentPic;
         },
 
